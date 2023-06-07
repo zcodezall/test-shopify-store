@@ -74,6 +74,19 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "5f839eda-003a-4602-a97c-196dc9b3b1ab": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
         }
       },
       "block_order": [
@@ -88,7 +101,8 @@
         "489f7c15-7aa7-43fc-acd3-8e0b62afe239",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "5f839eda-003a-4602-a97c-196dc9b3b1ab"
       ],
       "settings": {
         "enable_sticky_info": true,
