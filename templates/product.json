@@ -68,13 +68,6 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "5f839eda-003a-4602-a97c-196dc9b3b1ab": {
           "type": "complementary",
           "settings": {
@@ -86,6 +79,13 @@
             "pagination_style": "counter",
             "image_ratio": "square",
             "enable_quick_add": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
           }
         }
       },
@@ -101,8 +101,8 @@
         "489f7c15-7aa7-43fc-acd3-8e0b62afe239",
         "buy_buttons",
         "description",
-        "share",
-        "5f839eda-003a-4602-a97c-196dc9b3b1ab"
+        "5f839eda-003a-4602-a97c-196dc9b3b1ab",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
