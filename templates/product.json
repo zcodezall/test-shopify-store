@@ -87,6 +87,15 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "bfb08810-d904-4254-aae8-3635a5c7d853": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "carrot",
+            "content": "<p>{{ product.vendor }}<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -102,7 +111,8 @@
         "buy_buttons",
         "description",
         "5f839eda-003a-4602-a97c-196dc9b3b1ab",
-        "share"
+        "share",
+        "bfb08810-d904-4254-aae8-3635a5c7d853"
       ],
       "settings": {
         "enable_sticky_info": true,
