@@ -91,7 +91,7 @@
         "bfb08810-d904-4254-aae8-3635a5c7d853": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Vendor",
             "icon": "carrot",
             "content": "<p>{{ product.vendor }}<\/p>",
             "page": ""
