@@ -45,7 +45,11 @@
             "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n  <div class=\"inventoryNote form__label\">\n  {% if current_variant.available %}\n    {% if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= 10 %}We have {{ current_variant.inventory_quantity }} in stock\n{% elsif current_variant.inventory_quantity > 10 %}We have more than 10 in stock\n    {% endif %}\n  {% endif %}\n<\/div>"
           }
         },
-        
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
         "489f7c15-7aa7-43fc-acd3-8e0b62afe239": {
           "type": "custom_liquid",
           "settings": {
