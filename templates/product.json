@@ -114,7 +114,7 @@
             "heading": "Dimensions",
             "icon": "check_mark",
             "content": "",
-            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension %}  <!-- Replace 'namespace' and 'key' with your actual metafield namespace and key -->\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}  <!-- Replace 'namespace' and 'key' with your actual metafield namespace and key -->\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
             "page": ""
           }
         }
