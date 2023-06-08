@@ -104,7 +104,7 @@
             "heading": "Dimensions",
             "icon": "youtube",
             "content": "",
-            "liquid": "{{product.metafields.custom.dimension_image.value}}",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image.value %}\n\n{% if imageMetafield %}\n  <img src=\"{{ imageMetafield | asset_url }}\" alt=\"Image\">\n{% endif %}",
             "page": ""
           }
         }
