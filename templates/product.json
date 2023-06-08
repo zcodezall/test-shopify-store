@@ -102,7 +102,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Dimensions",
-            "icon": "check_mark",
+            "icon": "youtube",
             "content": "",
             "liquid": "{{product.metafields.custom.dimension_image}}",
             "page": ""
