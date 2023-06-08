@@ -6,9 +6,19 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "76afe41a-9930-4903-91a1-db3c7a5d7133": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.product-specs {\n  display: flex;\n  border: 1px solid red;\n}\n\n.product-specs__column {\n  flex: 1;\n  border-right: 1px solid red;\n  padding: 0 10px;\n}\n\n.product-specs__column:last-child {\n  border-right: none;\n}\n<\/style>\n\n<div class=\"product-specs\">\n  <div class=\"product-specs__column\">\n    <h3>Features<\/h3>\n    {% if product.features %}\n      <ul>\n        {% for feature in product.features %}\n          <li>{{ feature }}<\/li>\n        {% endfor %}\n      <\/ul>\n    {% else %}\n      <p>No features available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Specifications<\/h3>\n    {% if product.specifications %}\n      <ul>\n        {% for spec in product.specifications %}\n          <li>{{ spec }}<\/li>\n        {% endfor %}\n      <\/ul>\n    {% else %}\n      <p>No specifications available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Assembly<\/h3>\n    {% if product.assembly %}\n      {{ product.assembly }}\n    {% else %}\n      <p>No assembly information available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Warranty<\/h3>\n    {% if product.warranty %}\n      {{ product.warranty }}\n    {% else %}\n      <p>No warranty information available.<\/p>\n    {% endif %}\n  <\/div>\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "76afe41a-9930-4903-91a1-db3c7a5d7133"
   ]
 }
