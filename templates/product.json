@@ -101,7 +101,7 @@
         "ad9dfda3-77b0-443a-9c04-1c53cc18f97a": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
+            "heading": "",
             "icon": "apple",
             "content": "",
             "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image.value %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
