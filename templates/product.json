@@ -102,7 +102,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Dimensions",
-            "icon": "youtube",
+            "icon": "apple",
             "content": "",
             "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image.value %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
             "page": ""
