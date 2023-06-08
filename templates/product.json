@@ -104,7 +104,7 @@
             "heading": "Dimensions",
             "icon": "apple",
             "content": "",
-            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image.value %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
+            "liquid": "",
             "page": ""
           }
         }
