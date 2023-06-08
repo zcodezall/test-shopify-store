@@ -101,10 +101,10 @@
         "ad9dfda3-77b0-443a-9c04-1c53cc18f97a": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "apple",
+            "heading": "Watch the video",
+            "icon": "youtube",
             "content": "",
-            "liquid": "",
+            "liquid": "{{product.metafields.custom.youtube_embed.value}}",
             "page": ""
           }
         },
