@@ -107,6 +107,16 @@
             "liquid": "",
             "page": ""
           }
+        },
+        "a389d5d5-8f9c-4589-bfac-627938de1bcb": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "check_mark",
+            "content": "",
+            "liquid": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -124,7 +134,8 @@
         "5f839eda-003a-4602-a97c-196dc9b3b1ab",
         "share",
         "bfb08810-d904-4254-aae8-3635a5c7d853",
-        "ad9dfda3-77b0-443a-9c04-1c53cc18f97a"
+        "ad9dfda3-77b0-443a-9c04-1c53cc18f97a",
+        "a389d5d5-8f9c-4589-bfac-627938de1bcb"
       ],
       "settings": {
         "enable_sticky_info": true,
