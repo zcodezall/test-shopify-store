@@ -159,7 +159,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Product specifications and features",
-            "icon": "none",
+            "icon": "box",
             "row_content": "",
             "page": "product-specs-and-features"
           }
