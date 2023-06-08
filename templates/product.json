@@ -94,6 +94,17 @@
             "heading": "Vendor",
             "icon": "carrot",
             "content": "<p>{{ product.vendor }}<\/p>",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "ad9dfda3-77b0-443a-9c04-1c53cc18f97a": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "check_mark",
+            "content": "",
+            "liquid": "{{product.metafields.custom.dimension_image}}",
             "page": ""
           }
         }
@@ -112,7 +123,8 @@
         "description",
         "5f839eda-003a-4602-a97c-196dc9b3b1ab",
         "share",
-        "bfb08810-d904-4254-aae8-3635a5c7d853"
+        "bfb08810-d904-4254-aae8-3635a5c7d853",
+        "ad9dfda3-77b0-443a-9c04-1c53cc18f97a"
       ],
       "settings": {
         "enable_sticky_info": true,
