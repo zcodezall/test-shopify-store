@@ -192,6 +192,7 @@
                   </summary>
                   <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                     {{ block.settings.content }}
+                    {{ block.seattings.liquid}}
                     {{ block.settings.page.content }}
                   </div>
                 </details>
@@ -823,6 +824,10 @@ variantSwatch[{{ variant.id }}] = {{ variantSwatch }};
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
             },
             {
+              "value": "youtube",
+              "label": "Youtube"
+            },
+            {
               "value": "apple",
               "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
             },
@@ -1002,6 +1007,11 @@ variantSwatch[{{ variant.id }}] = {{ variantSwatch }};
           "type": "richtext",
           "id": "content",
           "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
+        },
+        {
+          "type": "liquid",
+           "id": "liquid",
+           "label": "Liquid"
         },
         {
           "type": "page",
