@@ -114,7 +114,7 @@
             "heading": "Dimensions",
             "icon": "check_mark",
             "content": "",
-            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}  <!-- Replace 'namespace' and 'key' with your actual metafield namespace and key -->\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    setTimeout(function() {\n      var accordionContent = document.querySelector(\".accordion__content\");\n      if (accordionContent && accordionContent.children.length === 0) {\n        var collapsibleField = accordionContent.closest(\".product__accordion\");\n        if (collapsibleField) {\n          collapsibleField.style.display = \"none\";\n        }\n      }\n    }, 0);\n  });\n<\/script>",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}\n<script>\n  document.addEventListener(\"DOMContentLoaded\", function() {\n    setTimeout(function() {\n      var accordionContent = document.querySelector(\".accordion__content\");\n      if (accordionContent && accordionContent.children.length === 0) {\n        var collapsibleField = accordionContent.closest(\".product__accordion\");\n        if (collapsibleField) {\n          collapsibleField.style.display = \"none\";\n        }\n      }\n    }, 0);\n  });\n<\/script>",
             "page": ""
           }
         }
