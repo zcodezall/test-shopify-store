@@ -194,13 +194,24 @@
             "liquid": "",
             "page": ""
           }
+        },
+        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Weights and dimensions",
+            "icon": "chat_bubble",
+            "row_content": "",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-0",
         "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-2",
         "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-3",
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1"
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1",
+        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6"
       ],
       "settings": {
         "caption": "",
