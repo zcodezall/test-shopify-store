@@ -10,3 +10,6 @@
 .accordion__content{
   text-align:center
 }
+.collapsible-content-wrapper-narrow{
+  max-width:113rem!important;
+}
