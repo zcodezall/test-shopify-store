@@ -161,7 +161,7 @@
             "heading": "WEIGHTS AND DIMENSIONS",
             "icon": "none",
             "row_content": "",
-            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img style=\"max-width:500px;height:500px;margin:0 auto\"src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img style=\"max-width:360px;margin:0 auto\"src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
             "page": ""
           }
         },
