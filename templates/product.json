@@ -63,11 +63,6 @@
             "show_gift_card_recipient": false
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "5f839eda-003a-4602-a97c-196dc9b3b1ab": {
           "type": "complementary",
           "settings": {
@@ -117,6 +112,11 @@
             "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
             "page": ""
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -130,12 +130,12 @@
         "quantity_selector",
         "489f7c15-7aa7-43fc-acd3-8e0b62afe239",
         "buy_buttons",
-        "description",
         "5f839eda-003a-4602-a97c-196dc9b3b1ab",
         "share",
         "bfb08810-d904-4254-aae8-3635a5c7d853",
         "ad9dfda3-77b0-443a-9c04-1c53cc18f97a",
-        "a389d5d5-8f9c-4589-bfac-627938de1bcb"
+        "a389d5d5-8f9c-4589-bfac-627938de1bcb",
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -224,8 +224,8 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "related-products": {
