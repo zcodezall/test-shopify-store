@@ -4,5 +4,5 @@
 }
 
 .accordion summary{
-  text-align:center!important;
+  justify-content:center;
 }
