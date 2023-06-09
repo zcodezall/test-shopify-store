@@ -2,3 +2,7 @@
     
     background-color:hotpink;
 }
+
+.accordion summary{
+  text-align:center
+}
