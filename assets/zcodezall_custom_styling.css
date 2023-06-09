@@ -11,5 +11,5 @@
   text-align:center
 }
 .collapsible-content-wrapper-narrow{
-  max-width:113rem;
+  max-width:113rem !important;
 }
