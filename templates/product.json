@@ -1,81 +1,5 @@
 {
   "sections": {
-    "9fc4ed78-83ee-415a-a68b-51cc2c474011": {
-      "type": "collapsible-content",
-      "blocks": {
-        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "WEIGHTS AND DIMENSIONS",
-            "icon": "chat_bubble",
-            "row_content": "",
-            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img style=\"max-width:500px;height:500px;margin:0 auto\"src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
-            "page": ""
-          }
-        },
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-0": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "PRODUCT SPECIFICATIONS AND FEATURES",
-            "icon": "box",
-            "row_content": "",
-            "liquid": "<style>\n.product-specs {\n  display: flex;\n  border: 1px solid red;\n}\n\n.product-specs__column {\n  flex: 1;\n  border-right: 1px solid red;\n  padding: 0 10px;\n}\n\n.product-specs__column:last-child {\n  border-right: none;\n}\n<\/style>\n\n<div class=\"product-specs\">\n  <div class=\"product-specs__column\">\n    <h3>Features<\/h3>\n    {% if product.metafields.custom.product_bullets %}\n     {{product.metafields.custom.product_bullets}}\n    {% else %}\n      <p>No features available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Specifications<\/h3>\n  {% if product.metafields.custom.product_color %}\n<b>Product Color: <\/b>     {{product.metafields.custom.product_color.value}}\n   \n    {% endif %}\n{% if product.metafields.custom.base_color %}\n<b>Base Color: <\/b>     {{product.metafields.custom.base_color.value}}\n{% if product.metafields.custom.top_color %}\n<b>Top Color: <\/b>     {{product.metafields.custom.top_color.value}}\n   \n    {% endif %}\n   \n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Assembly<\/h3>\n    {% if product.assembly %}\n      {{ product.assembly }}\n    {% else %}\n      <p>No assembly information available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Warranty<\/h3>\n    {% if product.warranty %}\n      {{ product.warranty }}\n    {% else %}\n      <p>No warranty information available.<\/p>\n    {% endif %}\n  <\/div>\n<\/div>",
-            "page": ""
-          }
-        },
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "PRODUCT CARE AND RESOURCES",
-            "icon": "none",
-            "row_content": "",
-            "liquid": "",
-            "page": ""
-          }
-        },
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "PRODUCT REVIEWS",
-            "icon": "none",
-            "row_content": "",
-            "liquid": "",
-            "page": ""
-          }
-        },
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "SHIPPING AND RETURNS",
-            "icon": "none",
-            "row_content": "",
-            "liquid": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6",
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-0",
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-2",
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-3",
-        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -228,6 +152,82 @@
         "padding_bottom": 12
       }
     },
+    "9fc4ed78-83ee-415a-a68b-51cc2c474011": {
+      "type": "collapsible-content",
+      "blocks": {
+        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WEIGHTS AND DIMENSIONS",
+            "icon": "chat_bubble",
+            "row_content": "",
+            "liquid": "{% assign imageMetafield = product.metafields.custom.dimension_image %}\n\n{% if imageMetafield != blank %}\n  <img style=\"max-width:500px;height:500px;margin:0 auto\"src=\"{{ imageMetafield | img_url: 'master' }}\" alt=\"Product Image\">\n{% endif %}",
+            "page": ""
+          }
+        },
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PRODUCT SPECIFICATIONS AND FEATURES",
+            "icon": "box",
+            "row_content": "",
+            "liquid": "<style>\n.product-specs {\n  display: flex;\n  border: 1px solid red;\n}\n\n.product-specs__column {\n  flex: 1;\n  border-right: 1px solid red;\n  padding: 0 10px;\n}\n\n.product-specs__column:last-child {\n  border-right: none;\n}\n<\/style>\n\n<div class=\"product-specs\">\n  <div class=\"product-specs__column\">\n    <h3>Features<\/h3>\n    {% if product.metafields.custom.product_bullets %}\n     {{product.metafields.custom.product_bullets}}\n    {% else %}\n      <p>No features available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Specifications<\/h3>\n  {% if product.metafields.custom.product_color %}\n<b>Product Color: <\/b>     {{product.metafields.custom.product_color.value}}\n   \n    {% endif %}\n{% if product.metafields.custom.base_color %}\n<b>Base Color: <\/b>     {{product.metafields.custom.base_color.value}}\n{% if product.metafields.custom.top_color %}\n<b>Top Color: <\/b>     {{product.metafields.custom.top_color.value}}\n   \n    {% endif %}\n   \n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Assembly<\/h3>\n    {% if product.assembly %}\n      {{ product.assembly }}\n    {% else %}\n      <p>No assembly information available.<\/p>\n    {% endif %}\n  <\/div>\n\n  <div class=\"product-specs__column\">\n    <h3>Warranty<\/h3>\n    {% if product.warranty %}\n      {{ product.warranty }}\n    {% else %}\n      <p>No warranty information available.<\/p>\n    {% endif %}\n  <\/div>\n<\/div>",
+            "page": ""
+          }
+        },
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PRODUCT CARE AND RESOURCES",
+            "icon": "none",
+            "row_content": "",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "PRODUCT REVIEWS",
+            "icon": "none",
+            "row_content": "",
+            "liquid": "",
+            "page": ""
+          }
+        },
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "SHIPPING AND RETURNS",
+            "icon": "none",
+            "row_content": "",
+            "liquid": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "c670c69b-f4d1-4744-b9aa-dd2827cf39e6",
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-0",
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-2",
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-3",
+        "template--19254833381660__9fc4ed78-83ee-415a-a68b-51cc2c474011-1686230351990d7908-1"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -247,8 +247,8 @@
     }
   },
   "order": [
-    "9fc4ed78-83ee-415a-a68b-51cc2c474011",
     "main",
+    "9fc4ed78-83ee-415a-a68b-51cc2c474011",
     "related-products"
   ]
 }
