@@ -3,13 +3,13 @@
     background-color:hotpink;
 }
 
-.accordion summary{
+/* .accordion summary{
   justify-content:center;
 }
 
 .accordion__content{
   text-align:center
-}
+} */
 .collapsible-content-wrapper-narrow{
   max-width:113rem !important;
 }
