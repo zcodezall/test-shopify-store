@@ -15,6 +15,7 @@
 }
 .attribute-name{
   background-color:#f5f5f5;
+  min-width:180px;
   
 }
 .pdp-meta-row{
