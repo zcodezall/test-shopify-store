@@ -17,3 +17,7 @@
   background-color:#f5f5f5;
   
 }
+.pdp-meta-row{
+  display:flex;
+  justify-content:space-between;
+}
