@@ -53,7 +53,7 @@
         "489f7c15-7aa7-43fc-acd3-8e0b62afe239": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% assign current_variant_backorder = product.selected_or_first_available_variant %}\n<div class=\"backorderNote form__label\">\n  {% if current_variant_bnackorder.available %}\n    {% if current_variant_backorder.inventory_quantity <= 0 and current_variant_backorder.inventory_policy == 'continue' %}\n      <span class=\"backorderMessage\">Available on backorder. Please allow 2-3 weeks for delivery.<\/span>\n    {% endif %}\n  {% endif %}\n<\/div>"
+            "custom_liquid": "{% assign current_variant_backorder = product.selected_or_first_available_variant %}\n<div class=\"backorderNote form__label\">\n  {% if current_variant_backorder.available %}\n    {% if current_variant_backorder.inventory_quantity <= 0 and current_variant_backorder.inventory_policy == 'continue' %}\n      <span class=\"backorderMessage\">Available on backorder. Please allow 2-3 weeks for delivery.<\/span>\n    {% endif %}\n  {% endif %}\n<\/div>"
           }
         },
         "buy_buttons": {
