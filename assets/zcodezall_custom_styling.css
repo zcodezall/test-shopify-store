@@ -25,6 +25,7 @@
 .pdp-meta-row{
   display:flex;
   justify-content:space-between;
+  font-size:12px
 }
 .rte ul{
   list-style-position: initial;
