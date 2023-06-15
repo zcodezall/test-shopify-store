@@ -13,7 +13,7 @@
 .collapsible-content-wrapper-narrow{
   max-width:113rem !important;
 }
-span .attribute-name{
+.attribute-name{
   background-color:"grey";
   padding:0 20px;
 }
