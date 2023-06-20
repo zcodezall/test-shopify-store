@@ -26,28 +26,49 @@
   </div>
 
   <script>
-    document.getElementById('gift-card-balance-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      const couponCode = document.getElementById('coupon').value;
+   document.getElementById('gift-card-balance-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  const couponCode = document.getElementById('coupon').value;
 
-      fetch(`/pages/gift-card-balance?email=${encodeURIComponent(email)}&coupon=${encodeURIComponent(couponCode)}`)
-        .then(response => response.json())
-        .then(data => {
-          if (data.error) {
-            // Handle error response
-            console.error(data.error);
-          } else {
-            // Display remaining balance
-            const remainingBalance = data.remaining_balance;
-            document.getElementById('remaining-balance').textContent = remainingBalance;
-            document.getElementById('balance-result').style.display = 'block';
+  fetch(`/admin/api/2021-09/price_rules.json?code=${encodeURIComponent(couponCode)}`, {
+    headers: {
+      'X-Shopify-Access-Token': 'YOUR_ACCESS_TOKEN', // Replace with your own access token
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.errors) {
+        // Handle error response
+        console.error(data.errors);
+      } else {
+        // Coupon code is valid, fetch gift card balance
+        const priceRuleId = data.price_rules[0].id;
+        return fetch(`/admin/api/2021-09/price_rules/${priceRuleId}/gift_cards.json`, {
+          headers: {
+            'X-Shopify-Access-Token': 'YOUR_ACCESS_TOKEN', // Replace with your own access token
           }
-        })
-        .catch(error => {
-          // Handle fetch error
-          console.error(error);
         });
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.errors) {
+        // Handle error response
+        console.error(data.errors);
+      } else {
+        // Display remaining balance
+        const remainingBalance = data.gift_cards[0].initial_value - data.gift_cards[0].amount_used;
+        document.getElementById('remaining-balance').textContent = remainingBalance;
+        document.getElementById('balance-result').style.display = 'block';
+      }
+    })
+    .catch(error => {
+      // Handle fetch error
+      console.error(error);
+    });
+});
+
     });
   </script>
 </body>
