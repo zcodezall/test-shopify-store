@@ -1,0 +1,54 @@
+<!-- gift-card-balance.liquid -->
+
+{% layout none %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gift Card Balance</title>
+  <!-- Add any necessary CSS or JavaScript files -->
+</head>
+<body>
+  <h1>Check Gift Card Balance</h1>
+
+  <form id="gift-card-balance-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="coupon">Coupon Code:</label>
+    <input type="text" id="coupon" name="coupon" required>
+
+    <button type="submit">Check Balance</button>
+  </form>
+
+  <div id="balance-result" style="display: none;">
+    <p>Your remaining balance: <span id="remaining-balance"></span></p>
+  </div>
+
+  <script>
+    document.getElementById('gift-card-balance-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const couponCode = document.getElementById('coupon').value;
+
+      fetch(`/pages/gift-card-balance?email=${encodeURIComponent(email)}&coupon=${encodeURIComponent(couponCode)}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.error) {
+            // Handle error response
+            console.error(data.error);
+          } else {
+            // Display remaining balance
+            const remainingBalance = data.remaining_balance;
+            document.getElementById('remaining-balance').textContent = remainingBalance;
+            document.getElementById('balance-result').style.display = 'block';
+          }
+        })
+        .catch(error => {
+          // Handle fetch error
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
