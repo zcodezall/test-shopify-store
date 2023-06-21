@@ -139,6 +139,17 @@
           "color_scheme": "background-1"
         }
       }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "15493114679298500990": {
+        "type": "shopify:\/\/apps\/gift-card-hero-ultimate-tool\/blocks\/app-embed\/57babc6a-ae2b-46cf-b565-dd8395b0276b",
+        "disabled": false,
+        "settings": {
+        }
+      }
     }
   },
   "presets": {
