@@ -1,4 +1,69 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+<script>
+  const netsuiteEndpoint = 'https://4057217.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=3490&deploy=1&customer_email="michael.stein@renegadefurniture.com"&method=getCustomerOrders'; // Replace with your actual NetSuite API endpoint URL
+
+  // Replace with your actual NetSuite OAuth2 credentials
+  const NETSUITE_CONSUMER_KEY = 'your_consumer_key';
+  const NETSUITE_ACCOUNT = 'your_account_id';
+  const NETSUITE_CONSUMER_SECRET = 'your_consumer_secret';
+  const NETSUITE_TOKEN_ID = 'your_token_id';
+  const NETSUITE_TOKEN_SECRET = 'your_token_secret';
+
+  // Make the API request to fetch the orders
+  fetch(netsuiteEndpoint, {
+    method: 'GET',
+    headers: {
+      'Authorization': generateOAuthHeader()
+    }
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Process the retrieved orders data
+    // You can extract and manipulate the data as needed
+
+    // Example: Render the order information in the specified section
+    var ordersSection = document.getElementById('netsuite-orders');
+    ordersSection.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+  })
+  .catch(error => {
+    // Handle any errors that occur during the API request
+    console.error('Error fetching orders from NetSuite:', error);
+  });
+
+  // Generate the OAuth2 header
+  function generateOAuthHeader() {
+    const timestamp = Math.floor(Date.now() / 1000);
+    const nonce = Math.random().toString(36).substr(2);
+    const signatureMethod = 'HMAC-SHA256';
+    const version = '1.0';
+
+    // Generate the base string
+    const baseString = 'GET&' +
+      encodeURIComponent(netsuiteEndpoint) + '&' +
+      encodeURIComponent(`oauth_consumer_key=${NETSUITE_CONSUMER_KEY}&` +
+      `oauth_nonce=${nonce}&` +
+      `oauth_signature_method=${signatureMethod}&` +
+      `oauth_timestamp=${timestamp}&` +
+      `oauth_token=${NETSUITE_TOKEN_ID}&` +
+      `oauth_version=${version}`);
+
+    // Generate the signature
+    const key = encodeURIComponent(NETSUITE_CONSUMER_SECRET) + '&' + encodeURIComponent(NETSUITE_TOKEN_SECRET);
+    const signature = btoa(crypto.createHmac('sha256', key).update(baseString).digest('binary'));
+
+    // Construct the OAuth2 header
+    const oauthHeader = `OAuth realm="${NETSUITE_ACCOUNT}",` +
+      `oauth_consumer_key="${NETSUITE_CONSUMER_KEY}",` +
+      `oauth_token="${NETSUITE_TOKEN_ID}",` +
+      `oauth_nonce="${nonce}",` +
+      `oauth_timestamp="${timestamp}",` +
+      `oauth_signature_method="${signatureMethod}",` +
+      `oauth_version="${version}",` +
+      `oauth_signature="${encodeURIComponent(signature)}"`;
+
+    return oauthHeader;
+  }
+</script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
