@@ -1,8 +1,8 @@
 <script>
-  async function getGadget = () => {
+  async function getGadget = (() => {
     const response = await fetch("https://next-level-app.gadget.app/hello");
     console.log(response);
-  }
+  });
   getGadget();
   
 </script>
