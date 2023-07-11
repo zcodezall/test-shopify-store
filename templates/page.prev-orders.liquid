@@ -1,8 +1,18 @@
 <script>
-  async const getGadget= (){
-    const response = await fetch("https://next-level-app.gadget.app/hello");
-    console.log(response);
-  }
-  getGadget();
+  // async const getGadget= (){
+  //   const response = await fetch("https://next-level-app.gadget.app/hello");
+  //   console.log(response);
+  // }
+  // getGadget();
+
+  async function fetchMoviesJSON() {
+  const response = await fetch('https://next-level-app.gadget.app/hello');
+  const movies = await response.json();
+  return movies;
+}
+
+fetchMoviesJSON().then(movies => {
+  console.log(movies); // fetched movies
+});
   
 </script>
