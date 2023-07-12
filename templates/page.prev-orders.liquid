@@ -10,26 +10,26 @@
   // });
 
   const url = 'https://next-level-app.gadget.app/hi';
-const data = {
-  name: 'John Doe',
-  age: 25,
-};
+    const data = {
+      name: 'John Doe',
+      age: 25,
+    };
 
-fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-})
-  .then(response => response.json())
-  .then(data => {
-    // Handle the response data
-    console.log(data);
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
   })
-  .catch(error => {
-    // Handle any errors
-    console.error('Error:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response data
+      console.log(data);
+    })
+    .catch(error => {
+      // Handle any errors
+      console.error('Error:', error);
+    });
 
 </script>
