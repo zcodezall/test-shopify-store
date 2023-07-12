@@ -1,12 +1,35 @@
 <script>
-  async function fetchJSON() {
-  const response = await fetch('https://next-level-app.gadget.app/hello');
-  const res = await response.json();
-  return res;
-  }
+  // async function fetchJSON() {
+  // const response = await fetch('https://next-level-app.gadget.app/hi');
+  // const res = await response.json();
+  // return res;
+  // }
 
-  fetchJSON().then(response => {
-   console.log(response); // fetched movies
+  // fetchJSON().then(response => {
+  //  console.log(response); // fetched movies
+  // });
+
+  const url = 'https://next-level-app.gadget.app/hi';
+const data = {
+  name: 'John Doe',
+  age: 25,
+};
+
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error('Error:', error);
   });
-  
+
 </script>
