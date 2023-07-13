@@ -1,4 +1,4 @@
-{% comment %} <script>
+<script>
     const url = 'https://next-level-app.gadget.app/hi';
     const data = {
       name: 'John Doe',
@@ -22,53 +22,6 @@
       console.error('Error:', error);
     });
 
-</script> {% endcomment %}
-
-<script>
-  const url = 'https://next-level-app.gadget.app/hi';
-  const data = {
-    name: 'John Doe',
-    age: 25,
-  };
-
-  fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data
-      console.log(data);
-
-      // Assign the response data to a Liquid variable
-      {% assign orders = data.hello %}
-
-      // Render the orders in Liquid
-      {% for orderKey in orders %}
-        <div>
-          <h3>Order Details</h3>
-          <p>Order ID: {{ orders[orderKey].orderId }}</p>
-          <p>Order Number: {{ orders[orderKey].orderNumber }}</p>
-          <p>Order Date: {{ orders[orderKey].orderDate }}</p>
-          <p>Order Status: {{ orders[orderKey].orderStatus }}</p>
-          <p>Order CONumber: {{ orders[orderKey].orderCONumber }}</p>
-          <h4>Items:</h4>
-          {% for item in orders[orderKey].itemsData %}
-            <div>
-              <p>Item Name: {{ item.itemName }}</p>
-              <img src="{{ item.imageURL }}" alt="{{ item.itemName }}">
-              <p>Item Status: {{ item.itemStatus }}</p>
-            </div>
-          {% endfor %}
-        </div>
-        <hr>
-      {% endfor %}
-    })
-    .catch(error => {
-      // Handle any errors
-      console.error('Error:', error);
-    });
 </script>
+
+<div class="orders">orders</div>
