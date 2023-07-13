@@ -16,6 +16,24 @@
     .then(data => {
       // Handle the response data
       console.log(data);
+      Object.entries(data.hello).forEach(([key, value]) => {
+        const orderNumber = value.orderNumber;
+        const orderDate = value.orderDate;
+        const orderStatus = value.orderStatus;
+
+        // Generate HTML output for each order
+        const orderHtml = `
+          <div>
+            <h3>Order: ${orderNumber}</h3>
+            <p>Order Date: ${orderDate}</p>
+            <p>Order Status: ${orderStatus}</p>
+            <!-- ...other data fields -->
+          </div>
+        `;
+        
+        // Append the HTML to an element on the page
+        document.getElementById('ordersContainer').innerHTML += orderHtml;
+      });
     })
     .catch(error => {
       // Handle any errors
