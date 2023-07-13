@@ -37,10 +37,9 @@
             const orderNumber = value.orderCONumber;
             const orderDate = value.orderDate;
             const orderStatus = value.orderStatus;
-            const images = [];
             Object.entries(value['itemsData']).forEach(([key, value]) => {
             if(key == 'imageURL'){
-              orderHtml += `<img src=${value} />`;
+              const images += `<img src=${value} />`;
             }
 
             });
@@ -52,6 +51,7 @@
                 <h3>Order: ${orderNumber}</h3>
                 <p>Order Date: ${orderDate}</p>
                 <p>Order Status: ${orderStatus}</p>
+                <div>${images}</div>
                 <!-- ...other data fields -->
               </div>
               </div>
