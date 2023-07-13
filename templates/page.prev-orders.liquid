@@ -30,7 +30,7 @@
 
         // Check if there are any orders
         if (data.hello) {
-          const orderHtml = `<label class="main-orders-label"> ORDERS</label>
+          let orderHtml = `<label class="main-orders-label"> ORDERS</label>
                               <div class="tov-customer-orders">';
           `;
           Object.entries(data.hello).forEach(([key, value]) => {
