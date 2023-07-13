@@ -39,7 +39,7 @@
             const orderStatus = value.orderStatus;
 
             // Generate HTML output for each order
-            orderHtml = `
+            orderHtml .= `
               <div class="tov-dashb-single-order-container">';
               <div>
                 <h3>Order: ${orderNumber}</h3>
@@ -53,7 +53,7 @@
             // Append the HTML to the orders container
             
           });
-          orderHtml = `</div>`;
+          orderHtml .= `</div>`;
           document.getElementById('ordersContainer').innerHTML += orderHtml;
         } else {
           // No orders found
