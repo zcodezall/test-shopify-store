@@ -37,7 +37,7 @@
             const orderNumber = value.orderCONumber;
             const orderDate = value.orderDate;
             const orderStatus = value.orderStatus;
-            const images;
+            let images = '';
             Object.entries(value['itemsData']).forEach(([key, value]) => {
             if(key == 'imageURL'){
               images += `<img src=${value} />`;
