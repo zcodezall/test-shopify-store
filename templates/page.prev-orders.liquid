@@ -40,10 +40,10 @@
             let images = '';
             console.log("DFDFDFDFDFDFDFDFDF")
             console.log(value.itemsData);
-            value.itemsData.forEach(() => {
-            // if(key == 'imageURL'){
-            //   images += `<img src=${value} />`;
-            // }
+            value.itemsData.forEach(({imageURL}) => {
+
+              images += `<img src=${imageURL} />`;
+
 
             });
          
