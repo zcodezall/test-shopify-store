@@ -30,7 +30,7 @@
 
         // Check if there are any orders
         if (data.hello) {
-          let orderHtml = `<label class="main-orders-label"> ORDERS</label>
+          let orderHtml = `<div class="tov-dashb-orders-label"><label class="main-orders-label">YOUR ORDERS</label<div>
                               <div class="tov-customer-orders">`;
         
           Object.entries(data.hello).forEach(([key, value]) => {
@@ -54,13 +54,13 @@
             orderHtml += `
               <div style="display:flex" class="tov-dashb-single-order-container">
               <div>
-                <h3>Order: ${orderNumber}</h3>
+                <h3>Order Number: ${orderNumber}</h3>
                 <p>Order Date: ${orderDate}</p>
                 <p>Order Status: ${orderStatus}</p>
                 <div>${images}</div>
                 <!-- ...other data fields -->
               </div>
-              <button styyle=''>View details</div>
+              <button style=''>View details</div>
               </div>
               <hr>
             `;
