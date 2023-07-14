@@ -70,9 +70,11 @@
               <div style='margin-top:20px'>
               <input style='background-color:black;color:white;padding:12px 7px;width: 140px;height: 40px;font-size:16px;font-weight:500;border:none;margin-top:20px' type="submit" value='View details' />
               </div>
-              </div>
-              <hr style='margin:2rem 0;'>
-            `;
+              </div>`;
+             console.log('length', data.hello.length());
+              if(data.hello.length()-1 != indexof(Key)){
+               orderHtml += `<hr style='margin:2rem 0;'>`;
+             }
            
             // Append the HTML to the orders container
             
