@@ -34,7 +34,7 @@
                              <label style="font-size:22px" class="main-orders-label">
                                ORDERS
                              </label>
-                             <hr style="margin:-0.5rem 0">
+                             <hr style="margin:-0.5rem 0 0.5rem 0">
                            </div>
                            
                            <div style="display:flex; flex-direction:column" class="tov-customer-orders">
@@ -59,7 +59,7 @@
          
             // Generate HTML output for each order
             orderHtml += `
-              <div style="display:flex;justify-content:center" class="tov-dashb-single-order-container">
+              <div style="display:flex;justify-content:space-between" class="tov-dashb-single-order-container">
               <div>
                 <h3>Order Number: ${orderNumber}</h3>
                 <p>Order Date: ${orderDate}</p>
@@ -67,8 +67,8 @@
                 <div>${images}</div>
                 <!-- ...other data fields -->
               </div>
-              <div>
-              <input style='backgound-color:black;color:white;padding:12px 7px;;width: 120px;height: 55px;width:50%' type="submit" value='View details' />
+              <div style='margin-top:20px'>
+              <input style='background-color:black;color:white;padding:12px 7px;;width: 120px;height: 55px;width:50%' type="submit" value='View details' />
               </div>
               </div>
               <hr style='margin:15rem 0;'>
