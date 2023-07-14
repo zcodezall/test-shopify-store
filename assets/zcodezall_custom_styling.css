@@ -30,3 +30,10 @@
 .rte ul{
   list-style-position: initial;
 }
+
+
+/* order dashboard section */
+
+.tov-dashb-orders-label hr{
+  margin:0.5rem 0;
+}
